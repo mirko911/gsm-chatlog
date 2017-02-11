@@ -1,0 +1,7 @@
+{
+    "chatlog": {
+        "enabled": true,
+        "logname": "chat.log",
+        "string": "<TIME> <PLAYER_NAME> (<PLAYER_GUID>) wrote: <MESSAGE>"
+    }
+}
