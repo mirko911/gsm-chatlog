@@ -9,7 +9,7 @@
             "date": "11.02.2016",
             "description": "Offers the ability to log the chat to a logfile.",
             "name": "Chatlog",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "website": "www.gsmanager.de"
         }
     }

@@ -41,13 +41,13 @@ class Chatlog extends Utils {
         parent::initPlugin();
         $this->config->setDefault('chatlog', 'enabled', false);
         $this->config->setDefault('chatlog', 'string', '<TIME> <PLAYER_NAME> (<PLAYER_GUID>) wrote: <MESSAGE>');
-        $this->config->setDefault('chatlog', 'logname', 'chat.log');
+        $this->config->setDefault('chatlog', 'logname', 'chat');
     }
 
     public function enable() {
         parent::enable();
         $this->events->register('playerSay', [$this, 'onPlayerSay']);
-        $this->loghandler = new \GSM\Daemon\Libraries\Logging\LogHandler("plugins/", "chatlog");
+        $this->loghandler = new \GSM\Daemon\Libraries\Logging\LogHandler("plugins/", $this->config->get('chatlog', 'logname'));
         $this->loghandler->setEcho(false);
     }
 
